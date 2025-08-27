@@ -177,6 +177,47 @@ h2::after {
     margin-top: 0;
 }
 
+/* 下载按钮样式 */
+.download-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+    color: #fff;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto;
+    min-width: 200px;
+}
+
+.download-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.download-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.download-button:hover::after {
+    transform: translateX(0);
+}
+
 /* 下载页面样式 */
 .feature-comparison {
     max-width: 800px; /* 设置最大宽度 */
