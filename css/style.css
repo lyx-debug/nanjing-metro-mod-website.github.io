@@ -332,6 +332,12 @@ h2::after {
     transform: translateY(-2px);
 }
 
+.btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none; /* 彻底禁用点击事件 */
+}
+
 .download-card .version-info {
     font-size: 0.9em;
     color: var(--secondary-color);
